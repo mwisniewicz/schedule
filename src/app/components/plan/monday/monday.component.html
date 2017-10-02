@@ -1,5 +1,10 @@
 <div class="container">
 	<ul>
-		<li class="plan" *ngFor="let one of mondayClasses">{{ one.time_in }} - {{one.time_out}} {{ one.name }}</li>
+		<li class="plan" *ngFor="let one of mondayClasses">
+			{{ one.time_in }} - {{one.time_out}}
+			<a [routerLink]="['/classe/'+one.name]">
+			 {{ one.name }}
+			</a>
+		</li>
 	</ul>
 </div>
