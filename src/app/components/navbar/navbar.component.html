@@ -2,13 +2,16 @@
 
 	<div class="container-fluid">
 		<div>
-			<a class="navbar-brand" [routerLink]="['/']">Schedule</a>
+			<a class="navbar-brand" [routerLink]="['/']">NusiakowyPlan</a>
 	    </div>
 
-	    <ul class="nav navbar-nav">
-	    	<li><a [routerLink]="['/']">Home</a></li>
-	    	<li><a [routerLink]="['/plan']">Plan</a></li>
-	    	<li><a [routerLink]="['/add-class']">Add Class</a></li>
+	    <ul class="nav navbar-nav navbar-left">
+	    	<li *ngIf="(afAuth.authState | async)"><a [routerLink]="['/monday']">Poniedziałek</a></li>
+	    	<li *ngIf="(afAuth.authState | async)"><a [routerLink]="['/tuesday']">Wtorek</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li *ngIf="!(afAuth.authState | async)"><a (click)="login()">Login</a></li>
+	    	<li *ngIf="(afAuth.authState | async)"><a (click)="logout()">Logout</a></li>
 	    </ul>
 	</div>
 </nav>

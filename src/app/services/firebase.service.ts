@@ -9,10 +9,18 @@ export class FirebaseService {
   constructor(private db: AngularFireDatabase) { }
 
   	getPlan(){
-      this.plan = this.db.list('/classe') as FirebaseListObservable<any[]>;
+      this.plan = this.db.list('/plan/wtorek') as FirebaseListObservable<any[]>;
       return this.plan;
   	}
 
-  
+  	getMondayPlan(){
+      this.plan = this.db.list('/plan/poniedzialek') as FirebaseListObservable<any[]>;
+      return this.plan;
+  	}
+
+  	getTuesdayPlan(){
+      this.plan = this.db.list('/plan/wtorek') as FirebaseListObservable<any[]>;
+      return this.plan;
+  	}
 
 }

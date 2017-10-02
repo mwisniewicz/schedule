@@ -5,4 +5,49 @@
 
 body {
 	font-family: 'Lato', sans-serif;
+	background-color: #FDF3E7;
+}
+
+.navbar-default {
+	background-color: #7E8F7C;
+}
+
+.navbar-default .navbar-brand {
+	font-size: 25px;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a{
+	color: #FDF3E7;
+	font-size: 18px;
+}
+
+.navbar-default .navbar-brand {
+	font-size: 25px;
+}
+
+li.plan {
+
+	list-style: none;
+	background-color: #3B3738;
+	color: #FDF3E7;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	padding: 20px;
+	margin: 5px;
+	opacity: 1.0;
+	transition: 0.2s ease-in-out;
+	box-shadow: 10px 7px 16px -6px rgba(126,143,124,0.75);
+}
+
+li.plan:hover {
+
+	list-style: none;
+	background-color: #3B3738;
+	color: #FDF3E7;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	padding: 20px;
+	margin: 5px;
+	opacity: 0.8;
+	transition: 0.2s ease-in-out;
 }
